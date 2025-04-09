@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masmorra Infernal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/?size=100&id=l8eGn58CG7Jw&format=png&color=000000">
+    <link rel="icon" type="image/png" href="logo.png" />
+
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="logo Masmorra Infernal" class="logo" />
+            <h1>Masmorra Infernal</h1>
+            <p>Bem-vindo ao mundo sombrio e misterioso da Masmorra Infernal!</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#regras">Regras</a></li>
+                <li><a href="#personagens">Personagens</a></li>
+                <li><a href="#Jogo">Jogo</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+            </ul>
+        </nav>
+        <section id="historia">
+            <h2>A História</h2>
+            <p>Descubra as lendas e segredos que envolvem a Masmorra Infernal.</p>
+            <P>No coração de um reino esquecido, ergue-se a Masmorra Infernal, um labirinto amaldiçoado onde demônios e espectros espreitam nas sombras. Dizem que no seu núcleo arde o Olho de Kazaroth, uma joia capaz de conceder poder ilimitado – ou condenar sua alma. Muitos heróis tentaram conquistá-la, mas apenas ossos e lamentos restaram. Agora, um novo aventureiro cruza os portões negros, lâmina em punho e coragem no peito. Cada passo revela armadilhas cruéis, portais proibidos e sussurros ancestrais. O tempo se distorce, a sanidade vacila, e a própria masmorra parece viva. Mas desistir não é opção – pois apenas aquele que vencer o Inferno poderá reescrever seu destino.</P>
+        </section>
+        <section id="regras">
+            <h2>Regras do Jogo</h2>
+            <p>Antes de entrar na masmorra, conheça as regras que regem este mundo.</p>
+            <P>1° SOBREVIVÊNCIA E TUDO, Tenha sabedoria e sabia pensar com calma, pois cada erro pode ser fatal.</P>
+            <p>2° A MASMORRA NUNCA É IGUAL, Cada exploração da Masmorra Infernal é única. sempre tera uma armadilha-lhe esperando e criaturas.</p>
+            <p>3° O MEDO É UM INIMIGO SILENCIOSO, Quanto mais tempo vc passar na Masmorra mais sua mente ficara fraca e fragil, e então tenha calma mas não seja muito devagar e não faça a do medo seu amigo pois ele te matara.</p>
+            <p>4° A MASMORRA SEMPRE OBSERVA, Cada decisão importa. A Masmorra "aprende" com os aventureiros, tornando cada veis mais dificil de chegar no final.</p>
+            <p>5° A MORTE NEM SEMPRE É O FIM, Alguns que aparecem na Masmorra retornam..., mas nuca da mesma forma. Mortos-vivos ou entidades deformadas que vão ir atras de você.</p>
+        </section>
+        <section id="personagens">
+            <h2>Personagens</h2>
+            <p>TENHA UM AVENTUREIRO COM UM MARTELO PARA MATAR TODO E TODOS NA SUA FRENTE.</p>
+            <p>Forjado nas chamas da vingança, Thorgal, o Quebrador de Almas, vaga pela Masmorra Infernal empunhando seu martelo de titânico. Cada golpe reduz seus inimigos a poeira, enquanto ele busca o demônio que destruiu seu clã. Seu caminho é pavimentado por ossos esmagados e promessas de justiça.</p>
+        </section>
+        <section id="Jogo">
+            <h2>Jogo</h2>
+            <p>Descubra as aventuras e desafios que se encontram na Masmorra Infernal.</p>
+            <p>Seja o seu próprio Guerreiro e desafiante, explorando as sombras e enfrentando os perigos da masmorra. Cada escolha que você fizer pode influenciar seu destino e a história que você vai contar. A Masmorra Infernal é um jogo de ação, suspense e aventura, onde você se torna o protagonista e enfrenta desafios que testam sua força e inteligência. A cada passo, você se aproxima de um destino imprevisível, e cada escolha pode determinar se você vence ou perde.</p>
+            <p> Jogue agora nosso mais novo jogo!!</p>
+            <iframe src="jogo/index.html"
+            width="800" height="600"
+            style="border: none;"></iframe>
+    </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato para saber mais sobre o jogo.</p>
+            <p>Contatos para saber mais sobre atualizações e duvidas.</p>
+            <p> EMAIL: Guiscarsi06@gmail.com</p>
+            <p>TELEFONE: (44)99979-7283</p>
+            <form name="FormContato" method="post">
+                <label for="name">Digite seu Nome:</label>
+                <input type="text" name="nome" id="nome"placeholder="Digite seu nome">
+                <label for="email">Digite seu Email:</label>
+                <input type="text" name="email" id="email" placeholder="Digite seu email">
+                <label for="mensagem">Digite sua Mensagem:</label>
+                <input type="text" name="mensagem" id="mensagem" placeholder="Digite sua mensagem">
+                <input type="submit" value="Enviar" />
+            </form>
+        </section>
+        <section id="galeria">
+            <h2>Galeria</h2>
+            <P> Veja um pouco do nosso jogo.</P>
+            <img src="FOTO JOGO F1.png" alt="FOTO JOGO F1" class="foto" />
+            <img src="FOTO JOGO.png" atl="FOTO JOGO.png" class="foto" />
+</section>
+        <footer>
+            <p>&copy; 2025 Masmorra Infernal - Todos os direitos reservados para Guilherme Coleraus Scarsi.</p>
+        </footer>
+        <script>
+            document.getElementById("botao").onclick = function (){
+                var nome = document.getelementbyid("nome").value;
+                var email = document.getelementbyid("email").value;
+                var mensagem = document.getelementbyid("mensagem").value;
+                alert("Olá " + nome + " seu email é " + email + " e sua mensagem é " + mensagem);
+            }
+            const validarEmail = (email) => {
+                const regex = /^[^\s]+@[^\s]+\.[^\s]+$/;
+                return regex.test(email);
+            };
+            const validarNome = (nome) => {
+                const regex = /^[a-zA-Z\s]+$/;
+                return regex.test(nome);
+            };
+            const validarMensagem = (mensagem) => {
+                const regex = /^[^\s]+$/;
+                return regex.test(mensagem);
+            };
+            const form = document.getElementById("FormContato");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const nome = form.nome.value;
+                const email = form.email.value;
+                const mensagem = form.mensagem.value;
+                if (!validarNome(nome)) {
+                    alert("Nome inválido. O nome deve conter apenas letras e espaços.");
+                    return;
+                }
+                if (!validarEmail(email)) {
+                    alert("Email inválido. Por favor, insira um email válido.");
+                    return;
+                }
+                if (!validarMensagem(mensagem)) {
+                    alert("Mensagem inválida. A mensagem deve conter apenas letras e espaços.");
+                    return;
+                }
+                alert("Formulário submetido com sucesso!");
+            });
+
+        </script>
+    </div>
+</body>
+</html>

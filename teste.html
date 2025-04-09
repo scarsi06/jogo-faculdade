@@ -1,0 +1,50 @@
+<form name="FormContato" method="post">
+    <label for="name">Digite seu Nome:</label>
+    <input type="text" name="nome" id="nome"placeholder="Digite seu nome">
+    <label for="email">Digite seu Email:</label>
+    <input type="text" name="email" id="email" placeholder="Digite seu email">
+    <label for="mensagem">Digite sua Mensagem:</label>
+    <input type="text" name="mensagem" id="mensagem" placeholder="Digite sua mensagem">
+    <input type="submit" value="Enviar" />
+</form>
+<script>
+    document.getElementById("botao").onclick = function (){
+        var nome = document.getelementbyid("nome").value;
+        var email = document.getelementbyid("email").value;
+        var mensagem = document.getelementbyid("mensagem").value;
+        alert("Olá " + nome + " seu email é " + email + " e sua mensagem é " + mensagem);
+    }
+    const validarEmail = (email) => {
+        const regex = /^[^\s]+@[^\s]+\.[^\s]+$/;
+        return regex.test(email);
+    };
+    const validarNome = (nome) => {
+        const regex = /^[a-zA-Z\s]+$/;
+        return regex.test(nome);
+    };
+    const validarMensagem = (mensagem) => {
+        const regex = /^[^\s]+$/;
+        return regex.test(mensagem);
+    };
+    const form = document.getElementById("FormContato");
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const nome = form.nome.value;
+        const email = form.email.value;
+        const mensagem = form.mensagem.value;
+        if (!validarNome(nome)) {
+            alert("Nome inválido. O nome deve conter apenas letras e espaços.");
+            return;
+        }
+        if (!validarEmail(email)) {
+            alert("Email inválido. Por favor, insira um email válido.");
+            return;
+        }
+        if (!validarMensagem(mensagem)) {
+            alert("Mensagem inválida. A mensagem deve conter apenas letras e espaços.");
+            return;
+        }
+        alert("Formulário submetido com sucesso!");
+    });
+
+</script>

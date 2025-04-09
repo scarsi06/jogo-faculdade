@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+
+body {
+    background: url('https://www.example.com/textura-pergaminho.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #d4af37;
+    font-family: 'Uncial Antiqua', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 0;
+    padding: 0; 
+}
+body{
+    background-image: url('https://img.freepik.com/vetores-premium/uma-masmorra-escura-com-uma-parede-de-pedra-e-fundo-de-jogo-de-velas_597121-1194.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body{
+    margin: 0;
+    overflow: auto;
+}
+h1, h2, h3 {
+    font-family: 'Uncial Antiqua', cursive;
+    text-align: center;
+    color: #b8860b;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 25px;
+    border: 3px solid #8b4513;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+button {
+    background: linear-gradient(180deg, #8b0000 0%, #600000 100%);
+    color: #fff;
+    border: 2px solid #b8860b;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(180deg, #a52a2a 0%, #800000 100%);
+    transform: scale(1.05);
+}
+
+a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffd700;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li::before {
+    content: '⚔ ';
+    color: #b8860b;
+    font-size: 18px;
+}
+
+@media (max-width: 850px) {
+    .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+.logo{
+    max-width: 300px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+.foto{
+    margin: 0 auto 25px auto;
+    max-width: 500px;
+}
+form{
+    label{
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        font-size:16px;
+
+    }
+}
+input, textarea{
+    width:100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius:6px;
+    font-size:14px;
+}
+button{
+    background-color: #008000;
+    color:white;
+    border: nome;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:houver{
+    background-color: darkgreen;
+    transition: 0.3s ease;;
+}
