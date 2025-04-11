@@ -77,47 +77,35 @@
         <footer>
             <p>&copy; 2025 Masmorra Infernal - Todos os direitos reservados para Guilherme Coleraus Scarsi.</p>
         </footer>
-        <script>
-            document.getElementById("Botao").onclick = function (){
-                var nome = document.getelementbyid("nome").value;
-                var email = document.getelementbyid("email").value;
-                var mensagem = document.getelementbyid("mensagem").value;
-                alert("Olá " + nome + " seu email é " + email + " e sua mensagem é " + mensagem);
-            }
-            const validarEmail = (email) => {
-                const regex = /^[^\s]+@[^\s]+\.[^\s]+$/;
-                return regex.test(email);
-            };
-            const validarNome = (nome) => {
-                const regex = /^[a-zA-Z\s]+$/;
-                return regex.test(nome);
-            };
-            const validarMensagem = (mensagem) => {
-                const regex = /^[^\s]+$/;
-                return regex.test(mensagem);
-            };
-            const form = document.getElementById("FormContato");
-            form.addEventListener("submit", function (event) {
-                event.preventDefault();
-                const nome = form.nome.value;
-                const email = form.email.value;
-                const mensagem = form.mensagem.value;
-                if (!validarNome(nome)) {
-                    alert("Nome inválido. O nome deve conter apenas letras e espaços.");
-                    return;
+        <form id="FormContato">
+            <!-- seus inputs -->
+          </form>
+          
+          <script>
+            document.getElementById("FormContato").addEventListener("submit", function (e) {
+              e.preventDefault(); // evita o envio padrão
+          
+              const data = {
+                nome: document.getElementById("nome").value,
+                email: document.getElementById("email").value,
+                mensagem: document.getElementById("mensagem").value,
+              };
+          
+              fetch('/seu-endpoint-aqui', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+              }).then(res => {
+                if (res.ok) {
+                  alert('Mensagem enviada!');
+                } else {
+                  alert('Erro ao enviar mensagem.');
                 }
-                if (!validarEmail(email)) {
-                    alert("Email inválido. Por favor, insira um email válido.");
-                    return;
-                }
-                if (!validarMensagem(mensagem)) {
-                    alert("Mensagem inválida. A mensagem deve conter apenas letras e espaços.");
-                    return;
-                }
-                alert("Formulário submetido com sucesso!");
+              });
             });
-
-        </script>
+          </script>          
     </div>
 </body>
 </html>
