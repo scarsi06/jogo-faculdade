@@ -79,7 +79,11 @@
 </section>
         <footer>
             <p>&copy; 2025 Masmorra Infernal - Todos os direitos reservados para Guilherme Coleraus Scarsi.</p>
-        </footer>        
+        </footer>    
+        <fetch('/enviar-contato.php'{
+            method: 'POST',
+            body: new FormData(form)
+        })></fetch>
     </div>
 </body>
 </html>
