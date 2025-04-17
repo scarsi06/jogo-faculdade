@@ -79,36 +79,7 @@
 </section>
         <footer>
             <p>&copy; 2025 Masmorra Infernal - Todos os direitos reservados para Guilherme Coleraus Scarsi.</p>
-        </footer>
-        <form id="FormContato">
-            <!-- seus inputs -->
-          </form>
-          
-          <script>
-            document.getElementById("FormContato").addEventListener("submit", function (e) {
-              e.preventDefault(); // evita o envio padrão
-          
-              const data = {
-                nome: document.getElementById("nome").value,
-                email: document.getElementById("email").value,
-                mensagem: document.getElementById("mensagem").value,
-              };
-          
-              fetch('/seu-endpoint-aqui', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-              }).then(res => {
-                if (res.ok) {
-                  alert('Mensagem enviada!');
-                } else {
-                  alert('Erro ao enviar mensagem.');
-                }
-              });
-            });
-          </script>          
+        </footer>        
     </div>
 </body>
 </html>
