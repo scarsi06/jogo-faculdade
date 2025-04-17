@@ -1,4 +1,8 @@
 <?php
+ echo "formulario recebido via POST"
+ $_SERVER["REQUEST_METHOD"] === "POST";
+// c:\Users\Chris Coleraus\Desktop\SITE-JOGO\jogo-faculdade\enviar-contato.php
+<?php
 // Verifica se os dados foram enviados via POST
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Captura e limpa os dados do formulário
