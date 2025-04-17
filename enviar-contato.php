@@ -12,20 +12,32 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
-    // Aqui você pode enviar um email, salvar no banco, etc.
-    // Exemplo: envio de email
-    $para = "seu-email@seudominio.com"; // coloque seu email aqui
-    $assunto = "Nova mensagem de contato";
-    $corpo = "Nome: $nome\nEmail: $email\nMensagem:\n$mensagem";
-    $headers = "From: $email";
+    // Validação de email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Email inválido.";
+        exit;
+    }
 
+    // Configuração do email
+    $para = "guiscarsi06@gmail.com";
+    $assunto = "Nova mensagem de contato";
+
+    $corpo = "Nome: $nome\n";
+    $corpo .= "Email: $email\n";
+    $corpo .= "Mensagem:\n$mensagem\n";
+
+    $headers = "From: contato@seudominio.com\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+    // Envio do email
     if (mail($para, $assunto, $corpo, $headers)) {
         echo "Mensagem enviada com sucesso!";
     } else {
-        echo "Erro ao enviar a mensagem.";
+        echo "Erro ao enviar a mensagem. Tente novamente mais tarde.";
     }
+
 } else {
-    // Se não for uma requisição POST, retorna erro
     http_response_code(405); // Método não permitido
     echo "Método não permitido.";
 }
