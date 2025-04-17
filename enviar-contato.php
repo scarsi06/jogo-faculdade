@@ -37,8 +37,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "Erro ao enviar a mensagem. Tente novamente mais tarde.";
     }
 
-} else {
-    http_response_code(405); // Método não permitido
-    echo "Método não permitido.";
-}
+} else
 ?>
